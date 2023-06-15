@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="output">
+            <input type="text" class="output" id="result">
+        </div>
+        <hr>
+        <div class="buttons">
+            <strong>
+                <button class="ac OPERATOR" value="AC" onclick="clearScreen()"><b>AC</b></button>
+                <button class="mod OPERATOR" value="%" onclick="addSym('%')"><b>%</b></button>
+                <button class="back OPERATOR" value="DEL"onclick="cut()"><b>&#9003;</b></button>
+                <button class="divide OPERATOR" value="/" onclick="addSym('/')"><b>&#247;</b></button>
+                <button class="7" value="7" onclick="addNum('7')"><b>7</b></button>
+                <button class="8" value="8" onclick="addNum('8')"><b>8</b></button>
+                <button class="9" value="9" onclick="addNum('9')"><b>9</b></button>
+                <button class="multi OPERATOR" value="*" onclick="addSym('*')"><b></b>&#215;</b></button>
+                <button class="4" value="4" onclick="addNum('4')"><b>4</b></button>
+                <button class="5" value="5" onclick="addNum('5')"><b>5</b></button>
+                <button class="6" value="6" onclick="addNum('6')"><b>6</b></button>
+                <button class="sub OPERATOR" value="-" onclick="addSym('-')"><b></b>-</b></button>
+                <button class="1" value="1" onclick="addNum('1')"><b>1</b></button>
+                <button class="2" value="2" onclick="addNum('2')"><b>2</b></button>
+                <button class="3" value="3" onclick="addNum('3')"><b>3</b></button>
+                <button class="add OPERATOR" value="+" onclick="addSym('+')"><b>+</b></button>
+                <button class="d-zero" value="00" onclick="addNum('00')"><b>00</b></button>
+                <button class="zero" value="0" onclick="addNum('0')"> <b>0</b></button>
+                <button class="dot" value="." onclick="addSym('.')"><b>.</b></button>
+                <button class="equal OPERATOR" value="=" onclick="calculate()"><b>=</b></button>
+            </strong>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

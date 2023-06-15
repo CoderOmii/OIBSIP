@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>To Do List Web App</title>
+    <link rel="stylesheet" href="To Do.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        
+       $(document).ready(function(){
+        $('.save').click(function(event){
+            event.preventDefault();
+            var title = $("#Title").val();
+            var Des = $("#Description").val();
+             var data = "<tr><td>"+title+"</td><td>"+Des+"</td><td><button class='btn btn-danger den' id='delet'>DELETE</button></td></tr>";
+                $('#tbl').append(data);
+                $("#Title").val(" ");
+                $("#Description").val("");
+          
+                  
+            $('.den').click(function (event) {
+                event.preventDefault();
+        
+        
+                $(this).parent().parent().remove();
+            })
+        })
+       })
+    </script>
+</head>
+<body>
+    <div class="heading">
+        <h1>To-Do List Web App</h1>
+
+    </div>
+    <div class="main">
+        <form action="">
+            <input type="text" id="Title" placeholder="Title"  required ><br>
+            <textarea name="" id="Description" cols="34" rows="17" placeholder="Description"required></textarea><br>
+            <button name="save" class="save"><b> Save</b></button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th id="ti">Title</th>
+                    <th id="des">Description</th>
+                    <th id>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbl">
+            
+            </tbody>
+        </table>
+    </div>
+   
+</body>
+</html>
